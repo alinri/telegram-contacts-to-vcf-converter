@@ -21,6 +21,8 @@ cd .\telegram-contacts-to-vcf-converter.git\
 python .\telegram_to_vcf.py
 Please enter your telegram json location:
 \path\to\result.json\file
+done
+Your vcf file Stored in in \path\to\result.vcf
 ```
 
 ### Linux
@@ -30,6 +32,8 @@ cd telegram-contacts-to-vcf-converter/
 python3 telegram_to_vcf.py
 Please enter your telegram json location:
 /path/to/result.json/file
+done
+Your vcf file Stored in in /path/to/result.vcf
 ```
 
 
