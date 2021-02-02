@@ -1,5 +1,8 @@
 import io
 import json
+import quopri
+
+
 
 file_location = input("Please enter your telegram json location:\n")
 
