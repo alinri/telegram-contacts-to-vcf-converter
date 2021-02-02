@@ -3,7 +3,7 @@ import json
 import quopri
 
 
-def decode(name: str):
+def decode_quoted(name: str):
     return quopri.encodestring(name.encode('utf-8')).decode('utf-8')
 
 file_location = input("Please enter your telegram json location:\n")
@@ -15,3 +15,5 @@ contact_raw = ''.join(contact_file.readlines())
 contact_file.close()
 
 contacts_dict = json.loads(contact_raw)['contacts']['list']
+
+result_vcf = io.open('result.vcf', 'w', encoding='utf-8')
