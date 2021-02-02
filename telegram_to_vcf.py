@@ -26,6 +26,7 @@ for contact in contacts_dict:
     result_vcf.write(f'FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:{decode_quoted(contact["first_name"])} {decode_quoted(contact["last_name"])}\n')
     result_vcf.write(f'TEL;CELL:{contact["phone_number"]}\n')
     result_vcf.write('END:VCARD\n')
-result_vcf.close()
 
-print(path.dirname(__file__))
+result_vcf.close()
+print('done')
+print(f'Your vcf file Stored in in {path.dirname(__file__)+path.sep}result.vcp')
