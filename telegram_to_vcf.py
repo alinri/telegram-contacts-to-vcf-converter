@@ -17,3 +17,11 @@ contact_file.close()
 contacts_dict = json.loads(contact_raw)['contacts']['list']
 
 result_vcf = io.open('result.vcf', 'w', encoding='utf-8')
+
+for contact in contacts_dict:
+    result_vcf.write('BEGIN:VCARD\n')
+    result_vcf.write('VERSION:2.1\n')
+    result_vcf.write(f'N;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:{decode_quoted(contact["last_name"])};{decode_quoted(contact["first_name"])};;;\n')
+    result_vcf.write(f'FN;CHARSET=UTF-8;ENCODING=QUOTED-PRINTABLE:{decode_quoted(contact["first_name"])} {decode_quoted(contact["last_name"])}\n')
+    result_vcf.write(f'TEL;CELL:{contact["phone_number"]}\n')
+    result_vcf.write('END:VCARD\n')
