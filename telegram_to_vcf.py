@@ -3,6 +3,8 @@ import json
 import quopri
 
 
+def decode(name: str):
+    return quopri.encodestring(name.encode('utf-8')).decode('utf-8')
 
 file_location = input("Please enter your telegram json location:\n")
 
