@@ -29,4 +29,4 @@ for contact in contacts_dict:
 
 result_vcf.close()
 print('done')
-print(f'Your vcf file Stored in in {path.dirname(__file__)+path.sep}result.vcf')
+print(f'Your vcf file stored in in {path.dirname(__file__)+path.sep}result.vcf')
